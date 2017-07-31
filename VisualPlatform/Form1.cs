@@ -427,7 +427,7 @@ namespace VisualPlatform
 
 		private Thread threadClient;
 		private Socket socket;
-		IPAddress ip = IPAddress.Parse("192.168.0.100");
+		IPAddress ip = IPAddress.Parse("192.168.0.102");
 		public byte[] MsgBuffer = new byte[0xa00000];
 		private int length;
 		public DynamicBufferManager recDynBuffer;
@@ -477,8 +477,14 @@ namespace VisualPlatform
 			{
 				this.lastStartPosition = startIndex;
 				num2 = this.IndexOf(this.recDynBuffer.Buffer, this.endCode, startIndex, this.recDynBuffer.DataCount);
+				//for (int i = 0; i < 500; i++)
+				//{
+				//	recDynBuffer.Buffer[startIndex + 500 + i] = 0xff;
+				//}
+
 				if (num2 != -1)
 				{
+					//recDynBuffer.Buffer[startIndex + 100] = 0xfa;
 					this.lastEndPosition = num2;
 					this.recStream = new MemoryStream(this.recDynBuffer.Buffer, startIndex, num2 - startIndex);
 					Image image = Image.FromStream(recStream, true);
