@@ -427,7 +427,6 @@ namespace VisualPlatform
 
 		private Thread threadClient;
 		private Socket socket;
-		IPAddress ip = IPAddress.Parse("192.168.0.102");
 		public byte[] MsgBuffer = new byte[0xa00000];
 		private int length;
 		public DynamicBufferManager recDynBuffer;
@@ -439,6 +438,7 @@ namespace VisualPlatform
 
 		private void btn_Connet_Click(object sender, EventArgs e)
 		{
+			IPAddress ip = IPAddress.Parse(textBox4.Text);
 			recDynBuffer = new DynamicBufferManager(0xa00000);
 			this.startCode = new byte[] { 0xff, 0xd8, 0xff };
 			this.endCode = new byte[] { 0xff, 0xd9 };
@@ -488,8 +488,9 @@ namespace VisualPlatform
 					this.lastEndPosition = num2;
 					this.recStream = new MemoryStream(this.recDynBuffer.Buffer, startIndex, num2 - startIndex);
 					Image image = Image.FromStream(recStream, true);
-					Image<Bgr, Byte> My_Image = new Image<Bgr, byte>(new Bitmap(image));
-					imageBox1.Image = My_Image;
+					pictureBox1.Image = image;
+					//Image<Bgr, Byte> My_Image = new Image<Bgr, byte>(new Bitmap(image));
+					//imageBox1.Image = My_Image;
 				}
 			}
 		}

@@ -67,6 +67,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AcquireControl">
+      <HintPath>..\..\GrayEyes1303\AcquireControl\bin\Debug\AcquireControl.dll</HintPath>
+    </Reference>
     <Reference Include="CSScriptLibrary, Version=3.11.0.0, Culture=neutral, PublicKeyToken=70fcc3d18c749033, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\cs-script\lib\CSScriptLibrary.dll</HintPath>

@@ -32,6 +32,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.imageBox1 = new Emgu.CV.UI.ImageBox();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
 			this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -55,8 +56,10 @@
 			this.button3 = new System.Windows.Forms.Button();
 			this.button6 = new System.Windows.Forms.Button();
 			this.trackBar1 = new System.Windows.Forms.TrackBar();
+			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.tabControl1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
 			this.tabControl2.SuspendLayout();
 			this.tabPage3.SuspendLayout();
@@ -79,6 +82,7 @@
 			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.pictureBox1);
 			this.tabPage2.Controls.Add(this.imageBox1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 23);
 			this.tabPage2.Name = "tabPage2";
@@ -87,6 +91,14 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Image";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(70, 47);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(397, 277);
+			this.pictureBox1.TabIndex = 3;
+			this.pictureBox1.TabStop = false;
 			// 
 			// imageBox1
 			// 
@@ -258,6 +270,7 @@
 			// 
 			// tabPage6
 			// 
+			this.tabPage6.Controls.Add(this.textBox4);
 			this.tabPage6.Controls.Add(this.textBox3);
 			this.tabPage6.Controls.Add(this.btn_Connet);
 			this.tabPage6.Location = new System.Drawing.Point(4, 23);
@@ -322,6 +335,14 @@
 			this.trackBar1.Size = new System.Drawing.Size(325, 45);
 			this.trackBar1.TabIndex = 8;
 			// 
+			// textBox4
+			// 
+			this.textBox4.Location = new System.Drawing.Point(130, 4);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(146, 22);
+			this.textBox4.TabIndex = 6;
+			this.textBox4.Text = "192.168.0.";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -342,6 +363,7 @@
 			this.Text = "Form1";
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
 			this.tabControl2.ResumeLayout(false);
 			this.tabPage3.ResumeLayout(false);
@@ -385,6 +407,8 @@
 		private System.Windows.Forms.TabPage tabPage6;
 		private System.Windows.Forms.Button btn_Connet;
 		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.TextBox textBox4;
 	}
 }
 
